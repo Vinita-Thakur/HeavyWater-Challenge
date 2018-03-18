@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Document Classifier</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='css/classifier.css') }}" rel="stylesheet" type="text/css">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script type="text/javascript">
+
+      $(document).ready(function (){
+      $("#sub_button").on("click",function (event){
+        var data = $('sub_button').val();
+        var redirect_url = "/result";
+        event.preventDefault();
+        $.ajax({
+          url: redirect_url,
+          data: $('form').serialize(),
+          type: "POST",
+           success:function(j){
+           $("#result").html(j);
+
+            },
+            error:function(error){
+             alert(eval(error))
+             console.log(error);
+            }
+        });
+      });
+      });
+      </script>
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Paste the document</h2>
+        <input type="textarea" name="doc_data" id="inputEmail" class="form-control" placeholder="" required autofocus>
+          <button class="btn btn-lg btn-primary btn-block" type="submit" id="sub_button">Classify</button>
+      </form>
+
+    </div> <!-- /container -->
+
+    <div id = "result"></div>
+  </body>
+</html>
