@@ -1,19 +1,7 @@
 version: 0.0
 os: linux
-files:
-  - source: runPy.sh
-    destination: runPy.sh
-  - source: /
-    destination: /
 hooks:
   ApplicationStart:
     - location: runPy.sh
       timeout: 30000
       runas: root
-
-permissions:
-  - object: runPy.sh
-    pattern: "**"
-    mode: 777
-    type:
-      - file
