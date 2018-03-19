@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /
+hooks:
+  ApplicationStart:
+    - location: /MainPage.py
+      timeout: 300
+      runas: root
