@@ -3,6 +3,8 @@ os: linux
 files:
   - source: runPy.sh
     destination: runPy.sh
+  - source: \
+    destination: \
 hooks:
   ApplicationStart:
     - location: runPy.sh
