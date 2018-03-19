@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: ./runPy.sh
+  - source: runPy.sh
     destination: runPy.sh
 hooks:
   ApplicationStart:
