@@ -5,6 +5,6 @@ files:
     destination: /
 hooks:
   ApplicationStart:
-    - location: /MainPage.py
+    - location: runPy.sh
       timeout: 300
       runas: root
