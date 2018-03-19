@@ -7,3 +7,4 @@ hooks:
   ApplicationStart:
     - location: runPy.sh
       timeout: 30000
+      runas: root
