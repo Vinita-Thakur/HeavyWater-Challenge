@@ -4,7 +4,7 @@ files:
   - source: /runPy.sh
     destination: /runPy.sh
   - source: /
-  - destination: /
+    destination: /
 
 hooks:
   ApplicationStart:
