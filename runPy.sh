@@ -1,3 +1,5 @@
 #!/bin/bash
-chmod +x MainPage.py
+echo "Before sudo"
+sudo chmod +x "MainPage.py"
+echo "After sudo"
 ./MainPage.py
