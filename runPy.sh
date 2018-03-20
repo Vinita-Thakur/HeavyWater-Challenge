@@ -1,2 +1,2 @@
 #!/bin/bash
-python MainPage.py
+./MainPage.py
