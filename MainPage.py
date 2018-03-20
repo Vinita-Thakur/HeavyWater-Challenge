@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import inverted_indexing
 import pickle
 

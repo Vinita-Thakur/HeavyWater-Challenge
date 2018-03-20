@@ -1,19 +1,19 @@
 version: 0.0
 os: linux
 files:
-  - source: runPy.sh
-    destination: runPy.sh
+  - source: MainPage.py
+    destination: MainPage.py
   - source: /
     destination: /
 
 hooks:
   ApplicationStart:
-    - location: runPy.sh
+    - location: MainPage.py
       timeout: 30000
       runas: root
 
 permissions:
-  - object: runPy.sh
+  - object: MainPage.py
     pattern: "**"
     mode: 777
     type:
